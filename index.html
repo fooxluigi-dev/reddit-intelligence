@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reddit Intelligence</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg: #0f1117; --surface: #1a1d27; --primary: #f97316; --primary-dim: rgba(249,115,22,0.15); --text: #e2e8f0; --text-muted: #64748b; --border: #2d3348; }
+    * { margin:0; padding:0; box-sizing:border-box }
+    body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); min-height:100vh; padding:24px }
+    .container { max-width:900px; margin:0 auto }
+    .header { display:flex; align-items:center; gap:16px; margin-bottom:28px; padding-bottom:20px; border-bottom:1px solid var(--border) }
+    .logo { font-size:28px }
+    .header-text h1 { font-size:22px; font-weight:700 }
+    .header-text p { font-size:12px; color:var(--text-muted); margin-top:2px }
+    .card { background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:20px; margin-bottom:16px }
+    .section-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:16px }
+    .section-header h2 { font-size:15px; font-weight:600 }
+    .badge { background:var(--primary-dim); color:var(--primary); font-size:11px; font-weight:600; padding:3px 10px; border-radius:20px }
+    .info-bar { display:flex; gap:16px; font-size:11px; color:var(--text-muted); margin-bottom:16px; flex-wrap:wrap }
+    table { width:100%; border-collapse:collapse }
+    th { text-align:left; font-size:11px; font-weight:600; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.05em; padding:0 8px 10px 8px; border-bottom:1px solid var(--border) }
+    td { padding:10px 8px; border-bottom:1px solid var(--border); vertical-align:top }
+    tr:last-child td { border-bottom:none }
+    .btn-xs { display:inline-block; padding:3px 8px; font-size:11px; font-weight:600; background:var(--primary); color:white; border-radius:5px; text-decoration:none }
+    .refresh-info { background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:14px 20px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px }
+    .refresh-info span { font-size:12px; color:var(--text-muted) }
+    .refresh-info strong { color:var(--primary); font-weight:600 }
+    .footer { text-align:center; font-size:11px; color:var(--text-muted); margin-top:24px }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">📡</div>
+      <div class="header-text">
+        <h1>Reddit Intelligence</h1>
+        <p>Daily signal from 14 curated subreddits · Auto-refreshes at 8 AM</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="section-header">
+        <h2>Top 5 Exceptional Posts</h2>
+        <span class="badge">5 posts</span>
+      </div>
+      <div class="info-bar">
+        <span>📂 14 subreddits</span>
+        <span>🕒 Updated 13 Apr 2026, 05:13 UTC</span>
+      </div>
+      <table>
+        <thead><tr><th style="width:24px">#</th><th>Post</th><th style="width:50px"></th></tr></thead>
+        <tbody>
+          <tr><td style="text-align:center;color:var(--primary)"><strong>1</strong></td><td><div style="font-size:13px;font-weight:600;margin-bottom:3px">💼 I'm a Serial Founder. Here's how I come up with Business Ideas. I will not promote.</div><div style="font-size:11px;color:#6b7280">r/startups · ⬆️ 573 · 💬 103 · 👍 95%</div></td><td style="text-align:right"><a href="https://reddit.com/r/startups/comments/1sivput/im_a_serial_founder_heres_how_i_come_up_with/" target="_blank" class="btn-xs">→</a></td></tr>
+          <tr><td style="text-align:center;color:var(--primary)"><strong>2</strong></td><td><div style="font-size:13px;font-weight:600;margin-bottom:3px">🤖 Hacker Uses Claude and ChatGPT to Breach Multiple Government Agencies</div><div style="font-size:11px;color:#6b7280">r/technology · ⬆️ 11107 · 💬 470 · 👍 98%</div></td><td style="text-align:right"><a href="https://reddit.com/r/technology/comments/1sjja5u/hacker_uses_claude_and_chatgpt_to_breach_multiple/" target="_blank" class="btn-xs">→</a></td></tr>
+          <tr><td style="text-align:center;color:var(--primary)"><strong>3</strong></td><td><div style="font-size:13px;font-weight:600;margin-bottom:3px">🤖 Microsoft exec suggests AI agents will need to buy software licenses, just like employees</div><div style="font-size:11px;color:#6b7280">r/technology · ⬆️ 1143 · 💬 193 · 👍 97%</div></td><td style="text-align:right"><a href="https://reddit.com/r/technology/comments/1sjyvfd/microsoft_exec_suggests_ai_agents_will_need_to/" target="_blank" class="btn-xs">→</a></td></tr>
+          <tr><td style="text-align:center;color:var(--primary)"><strong>4</strong></td><td><div style="font-size:13px;font-weight:600;margin-bottom:3px">💡 Commercial cleaning is a $112B market with 75-200% employee turnover.</div><div style="font-size:11px;color:#6b7280">r/Entrepreneur · ⬆️ 112 · 💬 45 · 👍 87%</div></td><td style="text-align:right"><a href="https://reddit.com/r/Entrepreneur/comments/1si80b4/commercial_cleaning_is_a112b_market_with_75200/" target="_blank" class="btn-xs">→</a></td></tr>
+          <tr><td style="text-align:center;color:var(--primary)"><strong>5</strong></td><td><div style="font-size:13px;font-weight:600;margin-bottom:3px">🤖 We are in dire need of privacy laws for AI .</div><div style="font-size:11px;color:#6b7280">r/ChatGPT · ⬆️ 70 · 💬 50 · 👍 88%</div></td><td style="text-align:right"><a href="https://reddit.com/r/ChatGPT/comments/1sju33y/we_are_in_dire_need_of_privacy_laws_for_ai/" target="_blank" class="btn-xs">→</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="refresh-info">
+      <span>🔄 Next refresh: <strong>14 Apr 2026, 8:00 AM</strong></span>
+      <span>Built with Hermes AI · Luigi Marcon</span>
+    </div>
+    <div class="footer">Filters: Entrepreneur, AI, Tech, Startups, Passive Income, Construction, Italy/EU</div>
+  </div>
+</body>
+</html>
